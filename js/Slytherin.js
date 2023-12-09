@@ -28,7 +28,7 @@ fetch('https://hp-api.onrender.com/api/characters')
                                 <p class="card-sub-title">${SlytheringCharacters[j].house}</p>
                                 <p class="card-info">${SlytheringCharacters[j].species}, ${SlytheringCharacters[j].gender}, ${SlytheringCharacters[j].ancestry}</p>
 
-                                <button class="card-btn">book tour</button>
+                                <a href="Details.html?id=${SlytheringCharacters[j]._id}" class="btn btn-primary m-2">book tour</a>
                             </div>
                     `;
                     contenedor.appendChild(card);
