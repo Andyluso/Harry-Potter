@@ -1,11 +1,11 @@
 fetch('https://hp-api.onrender.com/api/characters')
     .then(response => response.json())
     .then(data => {
-        let hufflepuffCharacters = data.filter(character => character.house === 'Slytherin');
+        let SlytheringCharacters = data.filter(character => character.house === 'Slytherin');
 
         let carrusel = document.getElementById("carruselPrincipal");
 
-        for (let i = 0; i < hufflepuffCharacters.length; i += 4) {
+        for (let i = 0; i < SlytheringCharacters.length; i += 4) {
             let carruselItem;
             if (i < 4) {
                 carruselItem = document.createElement("div");
@@ -18,15 +18,15 @@ fetch('https://hp-api.onrender.com/api/characters')
             contenedor.classList.add("d-flex", "justify-content-around", "p-5", "m-5", "flex-wrap");
 
             for (let j = i; j < i + 4; j++) {
-                if (hufflepuffCharacters[j] != undefined) {
+                if (SlytheringCharacters[j] != undefined) {
                     let card = document.createElement("div");
                     card.classList.add("card", "tamañoCard", "mb-4");
                     card.innerHTML = `
-                         <img src="${hufflepuffCharacters[j].image}" class="card-img" alt="">
+                         <img src="${SlytheringCharacters[j].image}" class="card-img" alt="">
                             <div class="card-body">
-                                <h1 class="card-title">${hufflepuffCharacters[j].name}</h1>
-                                <p class="card-sub-title">${hufflepuffCharacters[j].house}</p>
-                                <p class="card-info">${hufflepuffCharacters[j].species}, ${hufflepuffCharacters[j].gender}, ${hufflepuffCharacters[j].ancestry}</p>
+                                <h1 class="card-title">${SlytheringCharacters[j].name}</h1>
+                                <p class="card-sub-title">${SlytheringCharacters[j].house}</p>
+                                <p class="card-info">${SlytheringCharacters[j].species}, ${SlytheringCharacters[j].gender}, ${SlytheringCharacters[j].ancestry}</p>
 
                                 <button class="card-btn">book tour</button>
                             </div>
