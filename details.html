@@ -36,24 +36,35 @@
             </div>
         </nav>
     </header>
-    <main>
-        <div class="container d-flex justify-content-around justify-content-center contenedo">
-            <div class="card" style="width: 18rem;">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h2 id="name"></h2>
-                    <p id="description" class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                        card's content.</p>
+
+    <main id='app'>
+        <section class="divMapa d-flex justify-content-center ">
+            <div>
+                <img class="mapaIzquierdo" src="./imagenes/Details/mapaizquierdo.jpg" alt="mapaizquierdo">
+                <img class="mapaDerecho" src="./imagenes/Details/mapaderecho.jpg" alt="mapaderecho">
+                <div class="container d-flex justify-content-around align-items-start contenedo">
+                    <div v-for="filteredData in filteredData" class=" detailCard">
+                        <img :src="filteredData.image" class="card-img-top ImagenD" alt="...">
+                        <div class="card-body">
+                            <h2 >{{filteredData.name}}</h2>
+                            <p  class="card-text">House: {{filteredData.house}}</p>
+                            <p class="card-text">Ancestry: {{filteredData.ancestry}}</p>
+                            <p class="card-text">Gender: {{filteredData.gender}}</p>
+                            <p class="card-text">Species: {{filteredData.species}}
+                            </p>
+                        </div>
+                    </div>
+                    <!-- <div class=" detailCard">
+                        <ul class="list-group list-group-flush">
+                            <li id="name" class="list-group-item">A second item</li>
+                            <li class="list-group-item">A third item</li>
+                            <li class="list-group-item">An item</li>
+                        </ul>
+                    </div> -->
                 </div>
             </div>
-            <div class="card" style="width: 18rem;">
-                <ul class="list-group list-group-flush">
-                    <li id="name" class="list-group-item">A second item</li>
-                    <li class="list-group-item">A third item</li>
-                    <li class="list-group-item">An item</li>
-                </ul>
-            </div>
-        </div>
+        </section>
+      
     </main>
     <footer>
         <div class="container piedepag">
@@ -62,7 +73,9 @@
             <h2 class="g3">Grupo 3</h2>
         </div>
     </footer>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="./js/details.js"></script>
+    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
