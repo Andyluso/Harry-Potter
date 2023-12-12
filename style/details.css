@@ -11,6 +11,8 @@
 .bodyindex {
     
     background: url(../imagenes/Details/fondopergamino.jpg);
+    
+    background: url(../imagenes/Details/fondopergamino.jpg);
     background-size: 100vw 100vh;
     background-repeat: no-repeat;
 }
@@ -63,6 +65,7 @@ header{height: 14vh;}
 
 /* logo HP dorado */
 .contenedo {
+    
     
     display: flex;
     justify-content: center;

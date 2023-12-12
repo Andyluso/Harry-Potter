@@ -7,16 +7,6 @@
 }
 
 /* MODIFICACIONES DE ESTILO PAGINA INDEX */
-/* banner howards */
-.bodyindex {
-    background: url(../imagenes/castillo/Magic\ Studio\ Magic\ Expand\ L&P.jpg);
-    background-size: 100vw 100vh;
-    background-repeat: no-repeat;
-}
-
-body {
-    background-color: #243046;
-}
 
 /* Barra de navegación */
 .navbar {
@@ -54,7 +44,21 @@ body {
     height: auto;
 }
 
-/* INTERMEDIO ENTRE BANNER Y TARJETAS */
+/* banner howards */
+.bodyindex {
+    background: url(../imagenes/castillo/Magic\ Studio\ Magic\ Expand\ L&P.jpg);
+    background-size: 100vw 100vh;
+    background-repeat: no-repeat;
+    
+}
+
+body {
+    background-color: #243046;
+}
+
+
+
+/* INTERMEDIO ENTRE BANNER Y descrpcion */
 .trancision {
     display: flex;
     justify-content: center;
@@ -88,7 +92,7 @@ body {
     transition: opacity 0.3s ease-in-out;
 }
 
-/* ESCUDO */
+/* ESCUDO DE LAS CASAS*/
 .escudoh {
     width: 15vw;
 }
@@ -96,25 +100,25 @@ body {
 /* TARJETAS DE LAS CASAS*/
 .fondomain {
     background: url(../imagenes/castillo/4.jpg);
-    background-size: cover; 
+    background-size: cover;
     background-position: center center;
 }
 
-.card1  {
+.card1 {
     box-shadow: -1px 4px 30px 0px rgba(254, 246, 209, 1);
     position: relative;
     width: 250px;
     transition: transform .3s ease;
 }
 
-.card1  img:first-child {
+.card1 img:first-child {
     box-shadow: 0 60px 60px -60px rgba(0, 30, 255, 0.5);
     border-radius: 4px;
     object-fit: cover;
     width: 100%;
 }
 
-.card1  img:last-child {
+.card1 img:last-child {
     position: absolute;
     width: 200px;
     bottom: 0;
@@ -150,14 +154,81 @@ body {
     transform: translateY(10%);
 }
 
-/*TARJETAS FILTRADAS DE TODOS LOS PERSONAJES*/
+/*Descrpcion harry potter*/
 
-.tamañoCard2{
-    width: 200px; /* Ancho deseado */
-    height: 300px; /* Altura deseada */
-    object-fit: cover;
-    margin: 10vh;
+.fondodescrpcion {
+    background: url(../imagenes/logos/fondoestrellas.jpeg);
 }
+
+.descripcion {
+    width: 70vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    font-size: 2vw;
+    color: rgb(255, 159, 80);
+}
+
+.fotodescripcion {
+    width: 20vw;
+}
+
+/*Estilos de las tarjetas extraibles*/
+
+.fondoextraibles {
+    background: url(../imagenes/Comedores/biblioteca.jpg);
+    color: #fff;
+}
+
+.extraible {
+    display: flex;
+    width: 90vw;
+}
+
+.panel {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    box-shadow: -1px 4px 30px 0px rgba(254, 246, 209, 1);
+    height: 80vh;
+    border-radius: 50px;
+    flex: 0.5;
+    position: relative;
+    transition: flex 0.5s ease-in;
+    color: #fff;
+    cursor: pointer;
+    margin: 10px;
+}
+
+.panel h3 {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    opacity: 0;
+}
+
+.panel.active {
+    flex: 5;
+}
+
+.panel.active h3 {
+    opacity: 1;
+    transition: opacity 0.4s ease-in 0.4s;
+}
+
+@media(max-width:480px) {
+    .container {
+        width: 100vw;
+    }
+
+    .panel:nth-of-type(4),
+    .panel:nth-of-type(5) {
+        display: none;
+    }
+}
+
 
 
 /* Footer */
@@ -184,10 +255,4 @@ footer {
 /* Modificaciones para página de dos casas */
 .casasbody {
     background-color: #070404;
-}
-
-/*parte de las tarjetas con filtros*/
-
-#carouselExample{
-    background: url(../imagenes/personajes/barita.jpg);
 }
