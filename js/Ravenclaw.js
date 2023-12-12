@@ -28,8 +28,7 @@ fetch('https://hp-api.onrender.com/api/characters')
                                 <h1 class="card-title">${RavenclawCharacters[j].name}</h1>
                                 <p class="card-sub-title">${RavenclawCharacters[j].house}</p>
                                 <p class="card-info">${RavenclawCharacters[j].species}, ${RavenclawCharacters[j].gender}, ${RavenclawCharacters[j].ancestry}</p>
-
-                                <a href="Details.html?id=${RavenclawCharacters[j]._id}" class="btn btn-primary m-2">book tour
+                                <a href="Details.html?id=${RavenclawCharacters[j].id}" class="btn btn-primary m-2">book tour
                             </div>
                     `;
                     contenedor.appendChild(card);

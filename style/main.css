@@ -1,3 +1,4 @@
+/* Estilos generales */
 * {
     padding: 0;
     margin: 0;
@@ -5,29 +6,17 @@
     font-family: 'Poppins', sans-serif;
 }
 
-
 /* MODIFICACIONES DE ESTILO PAGINA INDEX */
-/* banner howards */
-.bodyindex {
-    background: url(../imagenes/castillo/Magic\ Studio\ Magic\ Expand\ L&P.jpg);
-    background-size: 100vw 100vh;
-    background-repeat: no-repeat;
-}
 
-body {
-    background-color: #243046;
-}
-
-
-/*Barra de navegacion*/
-
+/* Barra de navegación */
 .navbar {
     background: transparent;
-
+    z-index: 1000;
 }
 
 .navbar a {
     color: antiquewhite;
+    transition: transform 0.3s ease;
 }
 
 .logo {
@@ -35,8 +24,41 @@ body {
     height: auto;
 }
 
+.escudobarradenav1,
+.escudobarradenav2,
+.escudobarradenav3,
+.escudobarradenav4,
+.escudobarradenav5 {
+    margin-top: 2vh;
+    margin-left: 2vw;
+    width: 4vw;
+    transition: 0.5s;
+}
 
-/*INTERMEDIO ENTRE BANNER Y TARJETAS*/
+.escudobarradenav1:hover,
+.escudobarradenav2:hover,
+.escudobarradenav3:hover,
+.escudobarradenav4:hover,
+.escudobarradenav5:hover {
+    width: 5vw;
+    height: auto;
+}
+
+/* banner howards */
+.bodyindex {
+    background: url(../imagenes/castillo/Magic\ Studio\ Magic\ Expand\ L&P.jpg);
+    background-size: 100vw 100vh;
+    background-repeat: no-repeat;
+    
+}
+
+body {
+    background-color: #243046;
+}
+
+
+
+/* INTERMEDIO ENTRE BANNER Y descrpcion */
 .trancision {
     display: flex;
     justify-content: center;
@@ -44,14 +66,11 @@ body {
     height: 10vh;
 }
 
-
 .trancision img {
     width: 10vw;
 }
 
-
 /* imagen banner */
-
 /* logo HP dorado */
 .contenedor {
     display: flex;
@@ -65,38 +84,41 @@ body {
 .logohp {
     width: 50vw;
     height: auto;
+    transition: opacity 0.3s ease-in-out;
 }
 
+.logohp:hover {
+    opacity: 0.7;
+    transition: opacity 0.3s ease-in-out;
+}
 
-/*ESCUDo*/
-
+/* ESCUDO DE LAS CASAS*/
 .escudoh {
     width: 15vw;
 }
 
-/*TAARJETAS*/
-
+/* TARJETAS DE LAS CASAS*/
 .fondomain {
     background: url(../imagenes/castillo/4.jpg);
+    background-size: cover;
+    background-position: center center;
 }
 
-.card {
+.card1 {
     box-shadow: -1px 4px 30px 0px rgba(254, 246, 209, 1);
     position: relative;
     width: 250px;
-    transition: all .3s;
+    transition: transform .3s ease;
 }
 
-
-
-.card img:first-child {
+.card1 img:first-child {
     box-shadow: 0 60px 60px -60px rgba(0, 30, 255, 0.5);
     border-radius: 4px;
     object-fit: cover;
     width: 100%;
 }
 
-.card img:last-child {
+.card1 img:last-child {
     position: absolute;
     width: 200px;
     bottom: 0;
@@ -108,39 +130,112 @@ body {
     opacity: 0;
 }
 
-.card:hover {
-    transform:
-        perspective(250px) rotateX(10deg) translateY(-5%) translateZ(0);
+.card1:hover {
+    transform: perspective(250px) rotateX(10deg) translateY(-5%) translateZ(0);
 }
 
-.card::before {
+.card1::before {
     content: '';
     position: absolute;
     bottom: 0;
     height: 100%;
     width: 100%;
-    background-image:
-        linear-gradient(to bottom, transparent 10%, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, ) 95%);
+    background-image: linear-gradient(to bottom, transparent 10%, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0) 95%);
     opacity: 0;
     transition: all .3s ease;
 }
 
-.card:hover::before {
+.card1:hover::before {
     opacity: 1;
 }
 
-.card:hover img:last-child {
+.card1:hover img:last-child {
     opacity: 1;
     transform: translateY(10%);
 }
 
-/* Footer */
+/*Descrpcion harry potter*/
 
+.fondodescrpcion {
+    background: url(../imagenes/logos/fondoestrellas.jpeg);
+}
+
+.descripcion {
+    width: 70vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    font-size: 2vw;
+    color: rgb(255, 159, 80);
+}
+
+.fotodescripcion {
+    width: 20vw;
+}
+
+/*Estilos de las tarjetas extraibles*/
+
+.fondoextraibles {
+    background: url(../imagenes/Comedores/biblioteca.jpg);
+    color: #fff;
+}
+
+.extraible {
+    display: flex;
+    width: 90vw;
+}
+
+.panel {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    box-shadow: -1px 4px 30px 0px rgba(254, 246, 209, 1);
+    height: 80vh;
+    border-radius: 50px;
+    flex: 0.5;
+    position: relative;
+    transition: flex 0.5s ease-in;
+    color: #fff;
+    cursor: pointer;
+    margin: 10px;
+}
+
+.panel h3 {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    opacity: 0;
+}
+
+.panel.active {
+    flex: 5;
+}
+
+.panel.active h3 {
+    opacity: 1;
+    transition: opacity 0.4s ease-in 0.4s;
+}
+
+@media(max-width:480px) {
+    .container {
+        width: 100vw;
+    }
+
+    .panel:nth-of-type(4),
+    .panel:nth-of-type(5) {
+        display: none;
+    }
+}
+
+
+
+/* Footer */
 footer {
     background-color: black;
     color: antiquewhite;
     padding: 20px;
-
 }
 
 .footer1 {
@@ -157,8 +252,7 @@ footer {
     align-items: center;
 }
 
-/* MODIFICACION PAGINA DOS CASAS */
-
+/* Modificaciones para página de dos casas */
 .casasbody {
     background-color: #070404;
 }
