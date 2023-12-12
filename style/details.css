@@ -78,7 +78,8 @@ footer {
 }
 .detailCard {animation: aparicion 5500ms ease;}
 
-.ImagenD
+.ImagenD{height: 30vh;
+width: 30vw;}
 
 @keyframes aparicion{
 
