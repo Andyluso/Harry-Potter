@@ -1,10 +1,10 @@
+/* Estilos generales */
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
-
 
 /* MODIFICACIONES DE ESTILO PAGINA INDEX */
 /* banner howards */
@@ -18,16 +18,15 @@ body {
     background-color: #243046;
 }
 
-
-/*Barra de navegacion*/
-
+/* Barra de navegación */
 .navbar {
     background: transparent;
-
+    z-index: 1000;
 }
 
 .navbar a {
     color: antiquewhite;
+    transition: transform 0.3s ease;
 }
 
 .logo {
@@ -35,8 +34,27 @@ body {
     height: auto;
 }
 
+.escudobarradenav1,
+.escudobarradenav2,
+.escudobarradenav3,
+.escudobarradenav4,
+.escudobarradenav5 {
+    margin-top: 2vh;
+    margin-left: 2vw;
+    width: 4vw;
+    transition: 0.5s;
+}
 
-/*INTERMEDIO ENTRE BANNER Y TARJETAS*/
+.escudobarradenav1:hover,
+.escudobarradenav2:hover,
+.escudobarradenav3:hover,
+.escudobarradenav4:hover,
+.escudobarradenav5:hover {
+    width: 5vw;
+    height: auto;
+}
+
+/* INTERMEDIO ENTRE BANNER Y TARJETAS */
 .trancision {
     display: flex;
     justify-content: center;
@@ -44,14 +62,11 @@ body {
     height: 10vh;
 }
 
-
 .trancision img {
     width: 10vw;
 }
 
-
 /* imagen banner */
-
 /* logo HP dorado */
 .contenedor {
     display: flex;
@@ -65,38 +80,41 @@ body {
 .logohp {
     width: 50vw;
     height: auto;
+    transition: opacity 0.3s ease-in-out;
 }
 
+.logohp:hover {
+    opacity: 0.7;
+    transition: opacity 0.3s ease-in-out;
+}
 
-/*ESCUDo*/
-
+/* ESCUDO */
 .escudoh {
     width: 15vw;
 }
 
-/*TAARJETAS*/
-
+/* TARJETAS DE LAS CASAS*/
 .fondomain {
     background: url(../imagenes/castillo/4.jpg);
+    background-size: cover; 
+    background-position: center center;
 }
 
-.card {
+.card1  {
     box-shadow: -1px 4px 30px 0px rgba(254, 246, 209, 1);
     position: relative;
     width: 250px;
-    transition: all .3s;
+    transition: transform .3s ease;
 }
 
-
-
-.card img:first-child {
+.card1  img:first-child {
     box-shadow: 0 60px 60px -60px rgba(0, 30, 255, 0.5);
     border-radius: 4px;
     object-fit: cover;
     width: 100%;
 }
 
-.card img:last-child {
+.card1  img:last-child {
     position: absolute;
     width: 200px;
     bottom: 0;
@@ -108,39 +126,45 @@ body {
     opacity: 0;
 }
 
-.card:hover {
-    transform:
-        perspective(250px) rotateX(10deg) translateY(-5%) translateZ(0);
+.card1:hover {
+    transform: perspective(250px) rotateX(10deg) translateY(-5%) translateZ(0);
 }
 
-.card::before {
+.card1::before {
     content: '';
     position: absolute;
     bottom: 0;
     height: 100%;
     width: 100%;
-    background-image:
-        linear-gradient(to bottom, transparent 10%, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, ) 95%);
+    background-image: linear-gradient(to bottom, transparent 10%, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0) 95%);
     opacity: 0;
     transition: all .3s ease;
 }
 
-.card:hover::before {
+.card1:hover::before {
     opacity: 1;
 }
 
-.card:hover img:last-child {
+.card1:hover img:last-child {
     opacity: 1;
     transform: translateY(10%);
 }
 
-/* Footer */
+/*TARJETAS FILTRADAS DE TODOS LOS PERSONAJES*/
 
+.tamañoCard2{
+    width: 200px; /* Ancho deseado */
+    height: 300px; /* Altura deseada */
+    object-fit: cover;
+    margin: 10vh;
+}
+
+
+/* Footer */
 footer {
     background-color: black;
     color: antiquewhite;
     padding: 20px;
-
 }
 
 .footer1 {
@@ -157,8 +181,13 @@ footer {
     align-items: center;
 }
 
-/* MODIFICACION PAGINA DOS CASAS */
-
+/* Modificaciones para página de dos casas */
 .casasbody {
     background-color: #070404;
+}
+
+/*parte de las tarjetas con filtros*/
+
+#carouselExample{
+    background: url(../imagenes/personajes/barita.jpg);
 }

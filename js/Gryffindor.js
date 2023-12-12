@@ -1,6 +1,7 @@
 fetch('https://hp-api.onrender.com/api/characters')
     .then(response => response.json())
     .then(data => {
+       
         let gryffindorCharacters = data.filter(character => character.house === 'Gryffindor');
 
         let carrusel = document.getElementById("carruselPrincipal");
@@ -28,8 +29,8 @@ fetch('https://hp-api.onrender.com/api/characters')
                                 <p class="card-sub-title">${gryffindorCharacters[j].house}</p>
                                 <p class="card-info">${gryffindorCharacters[j].species}, ${gryffindorCharacters[j].gender}, ${gryffindorCharacters[j].ancestry}</p>
 
-                                <button class="card-btn"> <a href="../details.html?id=${data[j]._id}">Details</a> </button>
-                            </div>
+                                <a href="Details.html?id=${gryffindorCharacters[j].id}" class="btn btn-primary m-2">book tour                           
+                                 </div>
                     `;
                     contenedor.appendChild(card);
                 }
