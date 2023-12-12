@@ -24,7 +24,7 @@ fetch('https://hp-api.onrender.com/api/characters')
                     card.classList.add("card", "tamañoCard", "mb-4");
                     card.innerHTML = `
                          <img src="${gryffindorCharacters[j].image}" class="card-img" alt="">
-                            <div class="card-body">
+                            <div class="card-body cardCSS">
                                 <h1 class="card-title">${gryffindorCharacters[j].name}</h1>
                                 <p class="card-sub-title">${gryffindorCharacters[j].house}</p>
                                 <p class="card-info">${gryffindorCharacters[j].species}, ${gryffindorCharacters[j].gender}, ${gryffindorCharacters[j].ancestry}</p>

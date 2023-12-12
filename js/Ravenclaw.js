@@ -24,7 +24,7 @@ fetch('https://hp-api.onrender.com/api/characters')
                     card.classList.add("card", "tamañoCard", "mb-4");
                     card.innerHTML = `
                          <img src="${RavenclawCharacters[j].image}" class="card-img" alt="">
-                            <div class="card-body">
+                            <div class="card-body cardCSS">
                                 <h1 class="card-title">${RavenclawCharacters[j].name}</h1>
                                 <p class="card-sub-title">${RavenclawCharacters[j].house}</p>
                                 <p class="card-info">${RavenclawCharacters[j].species}, ${RavenclawCharacters[j].gender}, ${RavenclawCharacters[j].ancestry}</p>

@@ -23,7 +23,7 @@ fetch('https://hp-api.onrender.com/api/characters')
                     card.classList.add("card", "tamañoCard", "mb-4");
                     card.innerHTML = `
                          <img src="${SlytheringCharacters[j].image}" class="card-img" alt="">
-                            <div class="card-body">
+                            <div class="card-body cardCSS">
                                 <h1 class="card-title">${SlytheringCharacters[j].name}</h1>
                                 <p class="card-sub-title">${SlytheringCharacters[j].house}</p>
                                 <p class="card-info">${SlytheringCharacters[j].species}, ${SlytheringCharacters[j].gender}, ${SlytheringCharacters[j].ancestry}</p>
