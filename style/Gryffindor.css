@@ -18,13 +18,15 @@
 
 /*Barra de navegacion*/
 
+/* Barra de navegación */
 .navbar {
     background: transparent;
-
+    z-index: 1000;
 }
 
 .navbar a {
     color: antiquewhite;
+    transition: transform 0.3s ease;
 }
 
 .logo {
@@ -32,20 +34,25 @@
     height: auto;
 }
 
-
-/*INTERMEDIO ENTRE BANNER Y TARJETAS*/
-.trancision {
-    display: flex;
-    justify-content: center;
-    background: linear-gradient(#865836, #85432B);
-    height: 10vh;
+.escudobarradenav1,
+.escudobarradenav2,
+.escudobarradenav3,
+.escudobarradenav4,
+.escudobarradenav5 {
+    margin-top: 2vh;
+    margin-left: 2vw;
+    width: 4vw;
+    transition: 0.5s;
 }
 
-
-.trancision img {
-    width: 10vw;
+.escudobarradenav1:hover,
+.escudobarradenav2:hover,
+.escudobarradenav3:hover,
+.escudobarradenav4:hover,
+.escudobarradenav5:hover {
+    width: 5vw;
+    height: auto;
 }
-
 
 /* imagen banner */
 
