@@ -24,17 +24,16 @@
     height: auto;
 }
 
-.escudobarradenav1 {
+.escudobarradenav1{
     margin-top: 2vh;
     width: 4vw;
-    transition: 0.5s;
-}
-
+    transition: 0.5s;}
 .escudobarradenav2,
 .escudobarradenav3,
 .escudobarradenav4,
 .escudobarradenav5 {
     margin-top: 2vh;
+    margin-left: 1vw;
     margin-left: 1vw;
     width: 4vw;
     transition: 0.5s;
@@ -56,31 +55,26 @@
     background-repeat: no-repeat;
 
 }
-
 .bodyindexG {
     background: url(../imagenes/Comedores/comedor\ griffin.jpg);
     background-size: 100vw 100vh;
     background-repeat: no-repeat;
 }
-
 .bodyindexH {
     background: url(../imagenes/Comedores/comedor\ hufle.jpg);
     background-size: 100vw 100vh;
     background-repeat: no-repeat;
 }
-
 .bodyindexR {
     background: url(../imagenes/Comedores/comedor\ reven.jpg);
     background-size: 100vw 100vh;
     background-repeat: no-repeat;
 }
-
 .bodyindexS {
     background: url(../imagenes/Comedores/comedor\ sly.jpg);
     background-size: 100vw 100vh;
     background-repeat: no-repeat;
 }
-
 .bodyindexD {
 
     background: url(../imagenes/Details/fondopergamino.jpg);
@@ -98,10 +92,9 @@ body {
 .trancision {
     display: flex;
     justify-content: center;
-    background: linear-gradient(#293A54, #01021C);
+    background: linear-gradient(#293A54, #00021D);
     height: 10vh;
 }
-
 .trancisionG {
     display: flex;
     justify-content: center;
@@ -134,7 +127,6 @@ body {
     opacity: 0.7;
     transition: opacity 0.3s ease-in-out;
 }
-
 .logohpC {
     width: 20vw;
     height: auto;
@@ -154,44 +146,40 @@ body {
 
 
 
-.imagenfondosliderG {
+.imagenfondosliderG{
     background: url(/imagenes/grifindor/grifin1.jpeg);
 }
-
-.imagenfondosliderH {
+.imagenfondosliderH{
     background: url(/imagenes/personajes/15.jpg);
 }
-
 .imagenfondosliderR {
     background: url(../imagenes/personajes/14.jpg);
 }
-
 .imagenfondosliderS {
     background: url(../imagenes/personajes/17.jpg);
 }
-
-.fondo-tarjetas {
+.fondo-tarjetas{
     position: absolute;
 }
 
-.card {
+.card{
     width: 320px;
     height: 500px;
     border-radius: 20px;
     overflow: hidden;
     border: 8px solid #fff;
     position: relative;
-    box-shadow: 2px 1px 20px 1px rgba(255, 255, 255, 1);
+    box-shadow: 2px 1px 20px 1px rgba(255,255,255,1);
 }
 
-.card-img {
+.card-img{
     width: 100%;
     height: 100%;
     object-fit: cover;
     border-radius: 15px;
 }
 
-.cardCSS {
+.cardCSS{
     width: 100%;
     height: 100%;
     top: 0;
@@ -208,30 +196,30 @@ body {
     transition: 2s;
 }
 
-.card:hover .card-body {
+.card:hover .card-body{
     right: 0;
 }
 
-.card-title {
+.card-title{
     text-transform: uppercase;
     font-size: 50px;
     font-weight: 500;
 }
 
-.card-sub-title {
+.card-sub-title{
     text-transform: capitalize;
     font-size: 14px;
     font-weight: 300;
 }
 
-.card-info {
+.card-info{
     font-size: 16px;
     line-height: 25px;
     margin: 40px 0;
     font-weight: 400;
 }
 
-.card-btn {
+.card-btn{
     color: #1f3d47;
     background: #8fabba;
     padding: 10px 20px;
@@ -333,12 +321,13 @@ body {
 }
 
 
+
 .extraible {
     display: flex;
     width: 90vw;
 }
 
-.panel {
+.panel { 
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -359,6 +348,7 @@ body {
     left: 20px;
     opacity: 0;
 }
+
 
 .panel.active {
     flex: 5;
@@ -385,15 +375,17 @@ body {
 /* Footer */
 footer {
     background-color: black;
-    padding: 20px;
+    color: antiquewhite;
+    padding: 10px;
 
 }
 
 .footer1 {
-    width: 10vw;
+    width: 7vw;
 }
 
 .footer2 {
+    width: 5vw;
     width: 5vw;
 }
 
@@ -401,88 +393,61 @@ footer {
     display: flex;
     justify-content: space-around;
     align-items: center;
-
+   
 }
-
-.piedepag h2{
-    color: antiquewhite;
-}
+.g3{font-size: 20px ;}
 
 /* Modificaciones para página de dos casas */
 .contenedo {
-
-
+    
+    
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 77.3vh;
-
+    height: 78.6vh;
+  
 }
-
-.headerD {
-    height: 14vh;
-}
-
+.headerD{height: 14.7vh;}
 .casasbody {
     background-color: #070404;
 }
 
-.divMapa {
-    display: flex;
 
+.detailCard {animation: aparicion 5500ms ease;
 }
 
-.detailCard {
-    animation: aparicion 5500ms ease;
+.ImagenD{height: 30vh;
+width: 30vw;}
+
+@keyframes aparicion{
+
+    0% {filter: opacity(0.1);}
+
+    100% {filter: opacity(1);}
 }
 
-.ImagenD {
-    height: 30vh;
-    width: 35vw;
-}
-
-@keyframes aparicion {
-
-    0% {
-        filter: opacity(0.1);
-    }
-
-    100% {
-        filter: opacity(1);
-    }
-}
-
-.mapaIzquierdo {
-    position: absolute;
-    z-index: 1;
-    height: 82vh;
-    right: 65%;
-    top: 9.3%;
-    width: 30vw;
-    animation: dizquierdo 2500ms ease-out;
-}
+.mapaIzquierdo{position: absolute;
+z-index: 1;
+height:84vh ;
+right: 65%;
+top: 9.3%;
+width: 30vw;
+animation: dizquierdo 2500ms ease-out;}
 
 @keyframes dizquierdo {
-    0% {
-        right: 50%;
-    }
-
-    100% {
-        right: 65%;
-    }
-
+    0%{right: 50%;}
+    100%{right:65% ;}
+    
 }
 
-.mapaDerecho {
-    position: absolute;
-    left: 65%;
-    z-index: 1;
-    height: 82vh;
-    top: 9.3%;
-    width: 30vw;
-    animation: dderecho 2500ms ease-out;
-}
+.mapaDerecho{position: absolute;
+    left: 65% ;
+z-index: 1;
+height: 84vh;
+top: 9.3%;
+width: 30vw;
+animation: dderecho 2500ms ease-out;}
 
 @keyframes dderecho {
     0% {
@@ -505,30 +470,21 @@ position: relative;
     font-size: 1.5rem;
 }
 #imagen{
-    width: 99.1vw;
+    width: 98.9vw;
     height: 10vh;
 }
 #profesorCheckbox{
     margin-left: 22vw;
 }
-#estudianteCheckbox{
-    margin-left: 30px;
-}
-#magocheckbox{
-    margin-left: 30px;
-}
-#noMagocheckbox{
-    margin-left: 30px;
-}
-#aliveCheckBox{
-    margin-left: 30px;
-}
-#deceasedCheckBox{
-    margin-left: 30px;
-}
+#estudianteCheckbox,
+#magocheckbox,
+#noMagocheckbox,
+#aliveCheckBox,
+#deceasedCheckBox,
 #busquedaimpunt{
     margin-left: 30px;
 }
+
 #error-message{
     font-size: 2.5rem;
     position: absolute;
