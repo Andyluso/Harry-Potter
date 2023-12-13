@@ -38,9 +38,7 @@ const app = createApp({
 
             })
 
-        }
-
-    },
+        } },
     computed: {
     
 
