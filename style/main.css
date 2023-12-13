@@ -34,6 +34,7 @@
 .escudobarradenav5 {
     margin-top: 2vh;
     margin-left: 1vw;
+    margin-left: 1vw;
     width: 4vw;
     transition: 0.5s;
 }
@@ -52,7 +53,7 @@
     background: url(../imagenes/castillo/Magic\ Studio\ Magic\ Expand\ L&P.jpg);
     background-size: 100vw 100vh;
     background-repeat: no-repeat;
-    
+
 }
 .bodyindexG {
     background: url(../imagenes/Comedores/comedor\ griffin.jpg);
@@ -233,7 +234,7 @@ body {
 
 
 .fondomain {
-    background: url(../imagenes/castillo/4.jpg);
+    background: url(../imagenes/personajes/barita.jpg);
     background-size: cover;
     background-position: center center;
 }
@@ -291,7 +292,8 @@ body {
 /*Descrpcion harry potter*/
 
 .fondodescrpcion {
-    background: url(../imagenes/logos/fondoestrellas.jpeg);
+    background: url(../imagenes/castillo/color.jpg);
+    background-size: 100vw 100vh;
 }
 
 .descripcion {
@@ -302,7 +304,8 @@ body {
     flex-direction: column;
     text-align: center;
     font-size: 2vw;
-    color: rgb(255, 159, 80);
+    color: rgb(255, 255, 255);
+    text-shadow: 1px 5px 1px rgb(54, 54, 54);
 }
 
 .fotodescripcion {
@@ -313,8 +316,10 @@ body {
 
 .fondoextraibles {
     background: url(../imagenes/Comedores/biblioteca.jpg);
+    backdrop-filter: blur(50px);
     color: #fff;
 }
+
 
 
 .extraible {
@@ -379,6 +384,7 @@ footer {
 }
 
 .footer2 {
+    width: 5vw;
     width: 5vw;
 }
 

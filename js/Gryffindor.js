@@ -28,9 +28,9 @@ fetch('https://hp-api.onrender.com/api/characters')
                                 <h1 class="card-title">${gryffindorCharacters[j].name}</h1>
                                 <p class="card-sub-title">${gryffindorCharacters[j].house}</p>
                                 <p class="card-info">${gryffindorCharacters[j].species}, ${gryffindorCharacters[j].gender}, ${gryffindorCharacters[j].ancestry}</p>
+
                                 <a href="Details.html?id=${gryffindorCharacters[j].id}" class="btn btn-primary m-2">book tour                           
                                  </div>
-
                     `;
                     contenedor.appendChild(card);
                 }
