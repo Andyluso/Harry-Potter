@@ -44,7 +44,7 @@
                 <div class="container d-flex justify-content-around align-items-start contenedo ">
                     <div v-for="filteredData in filteredData" class=" detailCard ">
                         <img :src="filteredData.image" class="card-img-top ImagenD " alt="imagendelpersonaje">
-                        <div class="card-body">
+                        <div class="card-body  col-sm-10 flex-sm-column d-sm-flex">
                             <h2 >{{filteredData.name}}</h2>
                             <p  class="card-text">House: {{filteredData.house}}</p>
                             <p class="card-text">Ancestry: {{filteredData.ancestry}}</p>

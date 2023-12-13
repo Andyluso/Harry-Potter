@@ -47,37 +47,6 @@
 
         <div id="carouselExample" class="carousel slide imagenfondosliderG">
             <div id="carruselPrincipal" class="carousel-inner">
-                <div class="carousel-item active">
-                    <div v-for="(gryffindorCharacters, 4) of gryffindorCharacters" >
-                        <div v-for="gryffindorCharacters in gryffindorCharacters"
-                            class="d-flex justify-content-around p-5 m-5 flex-wrap">
-                            <div class="card tamañoCard mb-4">
-                                <img :src="gryffindorCharacters.image" class="card-img" alt="">
-                                <div class="card-body cardCSS">
-                                    <h1 class="card-title">{{gryffindorCharacters.name}}</h1>
-                                    <p class="card-sub-title">{{gryffindorCharacters.house}}</p>
-                                    <p class="card-info">{{gryffindorCharacters.species}},
-                                        {{gryffindorCharacters.gender}},
-                                        {{gryffindorCharacters.ancestry}}</p>
-
-                                    <a :href="'./Details.html?id='+gryffindorCharacters.id"
-                                        class="btn btn-primary m-2">book
-                                        tour
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-
-
-
-
-
-
-
-
                 <div class=" p-5">
                     <div class="container d-flex">
                     </div>
