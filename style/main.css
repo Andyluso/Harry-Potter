@@ -24,13 +24,18 @@
     height: auto;
 }
 
-.escudobarradenav1,
+.escudobarradenav1 {
+    margin-top: 2vh;
+    width: 4vw;
+    transition: 0.5s;
+}
+
 .escudobarradenav2,
 .escudobarradenav3,
 .escudobarradenav4,
 .escudobarradenav5 {
     margin-top: 2vh;
-    margin-left: 2vw;
+    margin-left: 1vw;
     width: 4vw;
     transition: 0.5s;
 }
@@ -49,7 +54,38 @@
     background: url(../imagenes/castillo/Magic\ Studio\ Magic\ Expand\ L&P.jpg);
     background-size: 100vw 100vh;
     background-repeat: no-repeat;
-    
+
+}
+
+.bodyindexG {
+    background: url(../imagenes/Comedores/comedor\ griffin.jpg);
+    background-size: 100vw 100vh;
+    background-repeat: no-repeat;
+}
+
+.bodyindexH {
+    background: url(../imagenes/Comedores/comedor\ hufle.jpg);
+    background-size: 100vw 100vh;
+    background-repeat: no-repeat;
+}
+
+.bodyindexR {
+    background: url(../imagenes/Comedores/comedor\ reven.jpg);
+    background-size: 100vw 100vh;
+    background-repeat: no-repeat;
+}
+
+.bodyindexS {
+    background: url(../imagenes/Comedores/comedor\ sly.jpg);
+    background-size: 100vw 100vh;
+    background-repeat: no-repeat;
+}
+
+.bodyindexD {
+
+    background: url(../imagenes/Details/fondopergamino.jpg);
+    background-size: 100vw 100vh;
+    background-repeat: no-repeat;
 }
 
 body {
@@ -62,7 +98,14 @@ body {
 .trancision {
     display: flex;
     justify-content: center;
-    background: linear-gradient(#293A54, #00021D);
+    background: linear-gradient(#293A54, #01021C);
+    height: 10vh;
+}
+
+.trancisionG {
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(#865836, #85432B);
     height: 10vh;
 }
 
@@ -92,14 +135,118 @@ body {
     transition: opacity 0.3s ease-in-out;
 }
 
+.logohpC {
+    width: 20vw;
+    height: auto;
+}
+
+.logohpC:hover {
+    opacity: 0.7;
+    transition: opacity 0.3s ease-in-out;
+}
+
 /* ESCUDO DE LAS CASAS*/
 .escudoh {
     width: 15vw;
 }
 
 /* TARJETAS DE LAS CASAS*/
+
+
+
+.imagenfondosliderG {
+    background: url(/imagenes/grifindor/grifin1.jpeg);
+}
+
+.imagenfondosliderH {
+    background: url(/imagenes/personajes/15.jpg);
+}
+
+.imagenfondosliderR {
+    background: url(../imagenes/personajes/14.jpg);
+}
+
+.imagenfondosliderS {
+    background: url(../imagenes/personajes/17.jpg);
+}
+
+.fondo-tarjetas {
+    position: absolute;
+}
+
+.card {
+    width: 320px;
+    height: 500px;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 8px solid #fff;
+    position: relative;
+    box-shadow: 2px 1px 20px 1px rgba(255, 255, 255, 1);
+}
+
+.card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.cardCSS {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: -100%;
+    position: absolute;
+    background: #1f3d4738;
+    backdrop-filter: blur(5px);
+    border-radius: 15px;
+    color: #fff;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: 2s;
+}
+
+.card:hover .card-body {
+    right: 0;
+}
+
+.card-title {
+    text-transform: uppercase;
+    font-size: 50px;
+    font-weight: 500;
+}
+
+.card-sub-title {
+    text-transform: capitalize;
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.card-info {
+    font-size: 16px;
+    line-height: 25px;
+    margin: 40px 0;
+    font-weight: 400;
+}
+
+.card-btn {
+    color: #1f3d47;
+    background: #8fabba;
+    padding: 10px 20px;
+    width: 120px;
+    border-radius: 5px;
+    text-transform: capitalize;
+    border: none;
+    outline: none;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+
 .fondomain {
-    background: url(../imagenes/castillo/4.jpg);
+    background: url(../imagenes/personajes/barita.jpg);
     background-size: cover;
     background-position: center center;
 }
@@ -157,7 +304,8 @@ body {
 /*Descrpcion harry potter*/
 
 .fondodescrpcion {
-    background: url(../imagenes/logos/fondoestrellas.jpeg);
+    background: url(../imagenes/castillo/color.jpg);
+    background-size: 100vw 100vh;
 }
 
 .descripcion {
@@ -168,7 +316,8 @@ body {
     flex-direction: column;
     text-align: center;
     font-size: 2vw;
-    color: rgb(255, 159, 80);
+    color: rgb(255, 255, 255);
+    text-shadow: 1px 5px 1px rgb(54, 54, 54);
 }
 
 .fotodescripcion {
@@ -179,8 +328,10 @@ body {
 
 .fondoextraibles {
     background: url(../imagenes/Comedores/biblioteca.jpg);
+    backdrop-filter: blur(50px);
     color: #fff;
 }
+
 
 .extraible {
     display: flex;
@@ -236,6 +387,7 @@ footer {
     background-color: black;
     color: antiquewhite;
     padding: 20px;
+
 }
 
 .footer1 {
@@ -243,16 +395,98 @@ footer {
 }
 
 .footer2 {
-    width: 10vw;
+    width: 5vw;
 }
 
 .piedepag {
     display: flex;
     justify-content: space-around;
     align-items: center;
+
 }
 
 /* Modificaciones para página de dos casas */
+.contenedo {
+
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 77.3vh;
+
+}
+
+.headerD {
+    height: 14vh;
+}
+
 .casasbody {
     background-color: #070404;
+}
+
+.divMapa {
+    display: flex;
+
+}
+
+.detailCard {
+    animation: aparicion 5500ms ease;
+}
+
+.ImagenD {
+    height: 30vh;
+    width: 35vw;
+}
+
+@keyframes aparicion {
+
+    0% {
+        filter: opacity(0.1);
+    }
+
+    100% {
+        filter: opacity(1);
+    }
+}
+
+.mapaIzquierdo {
+    position: absolute;
+    z-index: 1;
+    height: 82vh;
+    right: 65%;
+    top: 9.3%;
+    width: 30vw;
+    animation: dizquierdo 2500ms ease-out;
+}
+
+@keyframes dizquierdo {
+    0% {
+        right: 50%;
+    }
+
+    100% {
+        right: 65%;
+    }
+
+}
+
+.mapaDerecho {
+    position: absolute;
+    left: 65%;
+    z-index: 1;
+    height: 82vh;
+    top: 9.3%;
+    width: 30vw;
+    animation: dderecho 2500ms ease-out;
+}
+
+@keyframes dderecho {
+    0% {
+        left: 50%;
+    }
+
+    100% {
+        left: 65%;
+    }
 }

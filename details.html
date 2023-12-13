@@ -9,29 +9,28 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="./style/details.css">
+    <link rel="stylesheet" href="./style/main.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 </head>
 
-<body class="bodyindex">
-    <header>
+<body class="bodyindexD">
+    <header class="headerD">
 
         <!-- BARRA DE NAVEGACION -->
-        <nav class="navbar navbar-expand-lg ">
-            <div class="container-fluid position-fixed top-0">
-                <a class="navbar-brand" href="./index.html"><img class="logo" src="./imagenes/logos/nav harry logo.png"
-                        alt="logo harry poter"></a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                    <ul class="navbar-nav ">
-                        <li class="nav-item">
-                            <a class="nav-link" href="./index.html">Home</a>
-                        </li>
-                    </ul>
+        <nav class="navbar navbar-expand flex-wrap">
+            <div class="container-fluid position-fixed top-0 ">
+                <div class="collapse navbar-collapse justify-content-center flex-wrap" id="navbarNav">
+                    <a href="./Gryffindor.html"><img class="escudobarradenav1" src="./imagenes/Escudos/grifin.png"
+                            alt="Escudo Gryffindor"></a>
+                    <a href="./Hufflepuff.html"><img class="escudobarradenav2" src="./imagenes/Escudos/hofel.png"
+                            alt="Escudo Hufflepuff"></a>
+                    <a href="./index.html"><img class="escudobarradenav3" src="./imagenes/Escudos/escudo.png"
+                            alt="Escudo hogwarts"></a>
+                    <a href="./Ravenclaw.html"><img class="escudobarradenav4" src="./imagenes/Escudos/reven.png"
+                            alt="Escudo Ravenclaw"></a>
+                    <a href="./Slytherin.html"><img class="escudobarradenav5" src="./imagenes/Escudos/sli.png"
+                            alt="Escudo Slytherin"></a>
                 </div>
             </div>
         </nav>
@@ -42,10 +41,10 @@
             <div>
                 <img class="mapaIzquierdo" src="./imagenes/Details/mapaizquierdo.jpg" alt="mapaizquierdo">
                 <img class="mapaDerecho" src="./imagenes/Details/mapaderecho.jpg" alt="mapaderecho">
-                <div class="container d-flex justify-content-around align-items-start contenedo">
-                    <div v-for="filteredData in filteredData" class=" detailCard">
-                        <img :src="filteredData.image" class="card-img-top ImagenD" alt="...">
-                        <div class="card-body">
+                <div class="container d-flex justify-content-around align-items-start contenedo ">
+                    <div v-for="filteredData in filteredData" class=" detailCard ">
+                        <img :src="filteredData.image" class="card-img-top ImagenD " alt="imagendelpersonaje">
+                        <div class="card-body  col-sm-10 flex-sm-column d-sm-flex">
                             <h2 >{{filteredData.name}}</h2>
                             <p  class="card-text">House: {{filteredData.house}}</p>
                             <p class="card-text">Ancestry: {{filteredData.ancestry}}</p>
@@ -54,13 +53,7 @@
                             </p>
                         </div>
                     </div>
-                    <!-- <div class=" detailCard">
-                        <ul class="list-group list-group-flush">
-                            <li id="name" class="list-group-item">A second item</li>
-                            <li class="list-group-item">A third item</li>
-                            <li class="list-group-item">An item</li>
-                        </ul>
-                    </div> -->
+                 
                 </div>
             </div>
         </section>
