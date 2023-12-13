@@ -1,46 +1,7 @@
-export let profesorCheckbox
-export let estudianteCheckbox
-export let aliveCheckBox
-export let deceasedCheckBox
-export let busquedaimpunt
-export let favoritosCheckbox
 
 
-export function filterAndUpdateCarousel() {
-    hideError();
-   
-    if (profesorCheckbox.checked && estudianteCheckbox.checked) {
-        showError('Un personaje no puede ser profesor y estudiante al mismo tiempo.');
-        return;
-    }
-    if (aliveCheckBox.checked && deceasedCheckBox.checked) {
-        showError('Un personaje no puede estar vivo y muerto al mismo tiempo.');
-        return;
-    }
-    if (characters[j].image===""){innerHTML=`<img src="./imagenes/Personajefaltante/proclamación.jpg" class="card-img" alt=""></img>`}
 
 
-    const isFavorite = favoritosCheckbox.checked;
-    const isProfesor = profesorCheckbox.checked;
-    const isEstudiante = estudianteCheckbox.checked;
-    const isAlive = aliveCheckBox.checked;
-    const isDeceased = deceasedCheckBox.checked;
-    const searchText = busquedaimpunt.value.toLowerCase();
-    let filteredCharacters = gryffindorCharacters.filter(character => {
-        const matchProfesor = !isProfesor || character.hogwartsStaff;
-        const matchEstudiante = !isEstudiante || character.hogwartsStudent;
-        const matchAlive = !isAlive || character.alive;
-        const matchDeceased = !isDeceased || !character.alive;
-        const matchSearchText = !searchText || character.name.toLowerCase().includes(searchText);
-        return matchProfesor && matchEstudiante && matchAlive && matchDeceased && matchSearchText;
-    });
-    if (isFavorite) {
-        filteredCharacters = filteredCharacters.filter(character =>
-            localStorage.getItem(character.name) === 'true'
-        );
-    }
-    displayCharacters(filteredCharacters);
-}
 
 export function displayCharacters(characters) {
     let imagenFaltante = './imagenes/Personajefaltante/proclamación.jpg';
