@@ -28,7 +28,6 @@ fetch('https://hp-api.onrender.com/api/characters')
                                 <h1 class="card-title">${hufflepuffCharacters[j].name}</h1>
                                 <p class="card-sub-title">${hufflepuffCharacters[j].house}</p>
                                 <p class="card-info">${hufflepuffCharacters[j].species}, ${hufflepuffCharacters[j].gender}, ${hufflepuffCharacters[j].ancestry}</p>
-
                                 <a href="Details.html?id=${hufflepuffCharacters[j].id}" class="btn btn-primary m-2">book tour
                             </div>
                     `;
