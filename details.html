@@ -37,38 +37,69 @@
     </header>
 
     <main id='app'>
-        <section class="divMapa d-flex justify-content-center ">
-            <div>
-                <img class="mapaIzquierdo" src="./imagenes/Details/mapaizquierdo.jpg" alt="mapaizquierdo">
-                <img class="mapaDerecho" src="./imagenes/Details/mapaderecho.jpg" alt="mapaderecho">
-                <div class="container d-flex justify-content-around align-items-start contenedo ">
-                    <div v-for="filteredData in filteredData" class=" detailCard ">
-                        <img :src="filteredData.image" class="card-img-top ImagenD " alt="imagendelpersonaje">
-                        <div class="card-body  col-sm-10 flex-sm-column d-sm-flex">
-                            <h2 >{{filteredData.name}}</h2>
-                            <p  class="card-text">House: {{filteredData.house}}</p>
-                            <p class="card-text">Ancestry: {{filteredData.ancestry}}</p>
-                            <p class="card-text">Gender: {{filteredData.gender}}</p>
-                            <p class="card-text">Species: {{filteredData.species}}
-                            </p>
-                        </div>
+
+        <div>
+            <img class="mapaIzquierdo col-2	col-sm-3 col-md-3" src="./imagenes/Details/mapaizquierdo.jpg"
+                alt="mapaizquierdo">
+            <img class="mapaDerecho col-2	col-sm-3 col-md-3" src="./imagenes/Details/mapaderecho.jpg" alt="mapaderecho">
+            <div class="container d-flex justify-content-around align-items-start contenedo ">
+
+                <div v-for="filteredData in filteredData" class=" detailCard col-2	col-sm-3 col-md-3">
+                    <img v-if="filteredData.image.includes('https://')" :src="filteredData.image"
+                        class="card-img-top ImagenD " alt="imagendelpersonaje">
+                    <img v-else="" src="./imagenes/Personajefaltante/proclamación.jpg" class="card-img-top ImagenD "
+                        alt="imagendelpersonaje">
+                    <h2 class="fs-3 text-sm-center ">{{filteredData.name}}</h2>
+                    <div class="flex-wrap d-flex justify-content-between align-items-start col-6	col-sm-12 col-md-12">
+                        <p class="fo card-text  fw-bolder col-3 col-sm-5 col-md-5">Casa: <br> {{filteredData.house}}</p>
+                        <p v-if="filteredData.ancestry!= ''" class="card-text  fw-bolder fo  col-3 col-sm-5 col-md-5">
+                            Ancestros:<br> {{filteredData.ancestry}}
+                        </p>
+                        <p class="card-text  fw-bolder fo  col-3 col-sm-5 col-md-5">Genero: <br> {{filteredData.gender}}
+                        </p>
+                        
+                        <p v-if="filteredData.alive != false" class="card-text  fw-bolder fo  col-3 col-sm-5 col-md-5">Vivo
+                        </p>
+                        <p v-else="" class="card-text  fw-bolder fo col-5">Muerto</p>
+                        <p v-if="filteredData.hogwartsStudent != false" class="card-text  fw-bolder fo  col-3 col-sm-5 col-md-5">
+                            Estudiante</p>
+                        <p v-else="" class="card-text  fw-bolder fo col-5">Profesor</p>
+                        <p v-if="filteredData.eyeColour != ''" class="card-text  fw-bolder fo  col-3 col-sm-5 col-md-5">
+                            Ojos:
+                            {{filteredData.eyeColour}}</p>
+                        <p v-if="filteredData.hairColour != ''" class="card-text  fw-bolder fo  col-4 col-sm-6 col-md-7">
+                            Cabello: <br>
+                            {{filteredData.hairColour}}</p>
+                        </p>
+                        <p v-if="filteredData.dateOfBirth != null" class="card-text  fw-bolder fo col-3 col-sm-5 col-md-5">
+                            Nacio: <br>
+                            {{filteredData.dateOfBirth}}</p>
+                        </p>
+                        <p v-if="filteredData.patronus != ''" class="card-text  fw-bolder fo col-3 col-sm-5 col-md-5">
+                            Patronus: <br>
+                            {{filteredData.patronus}}</p>
+                        </p>
+
                     </div>
-                 
                 </div>
+
             </div>
-        </section>
-      
+
+        </div>
+        
+
+
     </main>
     <footer>
         <div class="container piedepag">
             <img class="footer1" src="./imagenes/logos/nav harry logo.png" alt="">
             <img class="footer2" src="./imagenes/logos/mind.webp" alt="">
-            <h2 class="g3">Grupo 3</h2>
+            <h2 class="g3">&copy; 2023 Grupo 3</h2>
         </div>
     </footer>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="./js/details.js"></script>
-    
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>

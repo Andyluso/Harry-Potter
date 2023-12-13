@@ -18,22 +18,39 @@ fetch('https://hp-api.onrender.com/api/characters')
             let contenedor = document.createElement("div");
             contenedor.classList.add("d-flex", "justify-content-around", "p-5", "m-5", "flex-wrap");
 
-            for (let j = i; j < i + 4; j++) {
-                if (RavenclawCharacters[j] != undefined) {
+           for (let j = i; j < i + 4; j++) {
+                if (RavenclawCharacters[j].image != "") {
                     let card = document.createElement("div");
                     card.classList.add("card", "tamañoCard", "mb-4");
                     card.innerHTML = `
-                         <img src="${RavenclawCharacters[j].image}" class="card-img" alt="">
+                         <img src="${RavenclawCharacters[j].image}" class="card-img imagenFaltante" alt="">
                             <div class="card-body cardCSS">
                                 <h1 class="card-title">${RavenclawCharacters[j].name}</h1>
                                 <p class="card-sub-title">${RavenclawCharacters[j].house}</p>
                                 <p class="card-info">${RavenclawCharacters[j].species}, ${RavenclawCharacters[j].gender}, ${RavenclawCharacters[j].ancestry}</p>
 
-                                <a href="Details.html?id=${RavenclawCharacters[j].id}" class="btn btn-primary m-2">book tour
-                            </div>
+                                <a href="Details.html?id=${RavenclawCharacters[j].id}" class="btn btn-primary m-2 ">DEtails                           
+                                 </div>
                     `;
                     contenedor.appendChild(card);
                 }
+                if (RavenclawCharacters[j].image === "") {
+
+                    let card = document.createElement("div");
+                    card.classList.add("card", "tamañoCard", "mb-4");
+                    card.innerHTML = `
+                     <img src="./imagenes/Personajefaltante/proclamación.jpg" class="card-img imagenFaltante" alt="">
+                        <div class="card-body cardCSS">
+                            <h1 class="card-title">${RavenclawCharacters[j].name}</h1>
+                            <p class="card-sub-title">${RavenclawCharacters[j].house}</p>
+                            <p class="card-info">${RavenclawCharacters[j].species}, ${RavenclawCharacters[j].gender}, ${RavenclawCharacters[j].ancestry}</p>
+
+                            <a href="Details.html?id=${RavenclawCharacters[j].id}" class="btn btn-primary m-2 ">Details                           
+                             </div>
+                `;
+                    contenedor.appendChild(card);
+                }
+
             }
             carruselItem.appendChild(contenedor);
             carrusel.appendChild(carruselItem);

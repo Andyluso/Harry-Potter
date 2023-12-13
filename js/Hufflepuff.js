@@ -19,21 +19,38 @@ fetch('https://hp-api.onrender.com/api/characters')
             contenedor.classList.add("d-flex", "justify-content-around", "p-5", "m-5", "flex-wrap");
 
             for (let j = i; j < i + 4; j++) {
-                if (hufflepuffCharacters[j] != undefined) {
+                if (hufflepuffCharacters[j].image !== "") {
                     let card = document.createElement("div");
                     card.classList.add("card", "tamañoCard", "mb-4");
                     card.innerHTML = `
-                         <img src="${hufflepuffCharacters[j].image}" class="card-img" alt="">
+                         <img src="${hufflepuffCharacters[j].image}" class="card-img imagenFaltante" alt="">
                             <div class="card-body cardCSS">
                                 <h1 class="card-title">${hufflepuffCharacters[j].name}</h1>
                                 <p class="card-sub-title">${hufflepuffCharacters[j].house}</p>
                                 <p class="card-info">${hufflepuffCharacters[j].species}, ${hufflepuffCharacters[j].gender}, ${hufflepuffCharacters[j].ancestry}</p>
 
-                                <a href="Details.html?id=${hufflepuffCharacters[j].id}" class="btn btn-primary m-2">book tour
-                            </div>
+                                <a href="Details.html?id=${hufflepuffCharacters[j].id}" class="btn btn-primary m-2 ">Details                          
+                                 </div>
                     `;
                     contenedor.appendChild(card);
                 }
+                if (hufflepuffCharacters[j].image === "") {
+
+                    let card = document.createElement("div");
+                    card.classList.add("card", "tamañoCard", "mb-4");
+                    card.innerHTML = `
+                     <img src="./imagenes/Personajefaltante/proclamación.jpg" class="card-img imagenFaltante" alt="">
+                        <div class="card-body cardCSS">
+                            <h1 class="card-title">${hufflepuffCharacters[j].name}</h1>
+                            <p class="card-sub-title">${hufflepuffCharacters[j].house}</p>
+                            <p class="card-info">${hufflepuffCharacters[j].species}, ${hufflepuffCharacters[j].gender}, ${hufflepuffCharacters[j].ancestry}</p>
+
+                            <a href="Details.html?id=${hufflepuffCharacters[j].id}" class="btn btn-primary m-2 ">Details                          
+                             </div>
+                `;
+                    contenedor.appendChild(card);
+                }
+
             }
             carruselItem.appendChild(contenedor);
             carrusel.appendChild(carruselItem);

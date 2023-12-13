@@ -380,7 +380,7 @@ footer {
 }
 
 .footer1 {
-    width: 8vw;
+    width: 7vw;
 }
 
 .footer2 {
@@ -394,6 +394,7 @@ footer {
     align-items: center;
    
 }
+.g3{font-size: 20px ;}
 
 /* Modificaciones para página de dos casas */
 .contenedo {
@@ -403,23 +404,20 @@ footer {
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 77.3vh;
+    height: 78.6vh;
   
 }
-.headerD{height: 14vh;}
+.headerD{height: 14.7vh;}
 .casasbody {
     background-color: #070404;
 }
 
-.divMapa {display: flex;
-
-}
 
 .detailCard {animation: aparicion 5500ms ease;
-z-index: 1;}
+}
 
 .ImagenD{height: 30vh;
-width: 35vw;}
+width: 30vw;}
 
 @keyframes aparicion{
 
@@ -430,7 +428,7 @@ width: 35vw;}
 
 .mapaIzquierdo{position: absolute;
 z-index: 1;
-height:82vh ;
+height:84vh ;
 right: 65%;
 top: 9.3%;
 width: 30vw;
@@ -445,7 +443,7 @@ animation: dizquierdo 2500ms ease-out;}
 .mapaDerecho{position: absolute;
     left: 65% ;
 z-index: 1;
-height: 82vh;
+height: 84vh;
 top: 9.3%;
 width: 30vw;
 animation: dderecho 2500ms ease-out;}
@@ -454,3 +452,7 @@ animation: dderecho 2500ms ease-out;}
     0%{left: 50%;}
     100%{left:65% ;} 
 }
+.imagenFaltante{
+height: 65vh;
+  } 
+ .fo{font-size: 15px;}
