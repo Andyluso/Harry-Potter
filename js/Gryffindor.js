@@ -7,9 +7,7 @@ const app = createApp({
     data() {
         return{
             gryffindorCharacters:{},
-            carrusel:{},
-
-
+            
         }
     },
 
@@ -20,12 +18,8 @@ const app = createApp({
     methods:{
         traerData(url) {
             fetch(url).then(response => response.json()).then(data => {
-
-
-
-
-
-
+                this.gryffindorCharacters = data.filter(character => character.house === 'Gryffindor');
+                       
             })
 
     }},
@@ -33,7 +27,7 @@ const app = createApp({
     computed:{}
 
 
-})
+}).mount('#app')
 
 
 

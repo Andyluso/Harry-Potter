@@ -38,7 +38,7 @@
             <img class="logohpC" src="./imagenes/Escudos/grifin.png" alt="Logohp">
         </div>
     </header>
-    <main>
+    <main id='app'>
         <!-- PARTE CENTRAL ENTRE EL BANNER Y LAS TARJETAS -->
         <div class="trancisionG">
             <img src="./imagenes/logos/harry potter logo dorado.png" alt="">
@@ -48,33 +48,24 @@
         <div id="carouselExample" class="carousel slide imagenfondosliderG">
             <div id="carruselPrincipal" class="carousel-inner">
                 <div class="carousel-item active">
-                    <div class="d-flex justify-content-around p-5 m-5 flex-wrap">
-                        <img src="${gryffindorCharacters[j].image}" class="card-img" alt="">
-                        <div class="card-body cardCSS">
-                            <h1 class="card-title">${gryffindorCharacters[j].name}</h1>
-                            <p class="card-sub-title">${gryffindorCharacters[j].house}</p>
-                            <p class="card-info">${gryffindorCharacters[j].species}, ${gryffindorCharacters[j].gender},
-                                ${gryffindorCharacters[j].ancestry}</p>
+                    <div v-for="(gryffindorCharacters, 4) of gryffindorCharacters" >
+                        <div v-for="gryffindorCharacters in gryffindorCharacters"
+                            class="d-flex justify-content-around p-5 m-5 flex-wrap">
+                            <div class="card tamañoCard mb-4">
+                                <img :src="gryffindorCharacters.image" class="card-img" alt="">
+                                <div class="card-body cardCSS">
+                                    <h1 class="card-title">{{gryffindorCharacters.name}}</h1>
+                                    <p class="card-sub-title">{{gryffindorCharacters.house}}</p>
+                                    <p class="card-info">{{gryffindorCharacters.species}},
+                                        {{gryffindorCharacters.gender}},
+                                        {{gryffindorCharacters.ancestry}}</p>
 
-                            <a href="Details.html?id=${gryffindorCharacters[j].id}" class="btn btn-primary m-2">book
-                                tour
+                                    <a :href="'./Details.html?id='+gryffindorCharacters.id"
+                                        class="btn btn-primary m-2">book
+                                        tour
+                                </div>
+                            </div>
                         </div>
-
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <div class="d-flex justify-content-around p-5 m-5 flex-wrap">
-                        <img src="${gryffindorCharacters[j].image}" class="card-img" alt="">
-                        <div class="card-body cardCSS">
-                            <h1 class="card-title">${gryffindorCharacters[j].name}</h1>
-                            <p class="card-sub-title">${gryffindorCharacters[j].house}</p>
-                            <p class="card-info">${gryffindorCharacters[j].species}, ${gryffindorCharacters[j].gender},
-                                ${gryffindorCharacters[j].ancestry}</p>
-
-                            <a href="Details.html?id=${gryffindorCharacters[j].id}" class="btn btn-primary m-2">book
-                                tour
-                        </div>
-
                     </div>
                 </div>
 
@@ -86,10 +77,11 @@
 
 
 
-                <!-- <div class=" p-5">
+
+                <div class=" p-5">
                     <div class="container d-flex">
                     </div>
-                </div> -->
+                </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
