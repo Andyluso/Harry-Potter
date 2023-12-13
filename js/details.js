@@ -30,17 +30,11 @@ const app = createApp({
                 this.parametros = new URLSearchParams(this.urlArmada.search)
                 this.id = this.parametros.get("id")
                 this.filteredData = data.filter((personaje) => personaje.id == this.id)
-                console.log(this.filteredData);
-
-                 
-                
-
+               console.log(this.filteredData);
 
             })
 
-        }
-
-    },
+        } },
     computed: {
     
 
