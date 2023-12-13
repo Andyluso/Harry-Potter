@@ -415,7 +415,8 @@ footer {
 
 }
 
-.detailCard {animation: aparicion 5500ms ease;}
+.detailCard {animation: aparicion 5500ms ease;
+z-index: 1;}
 
 .ImagenD{height: 30vh;
 width: 35vw;}
