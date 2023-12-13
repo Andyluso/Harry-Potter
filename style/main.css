@@ -327,7 +327,7 @@ body {
     width: 90vw;
 }
 
-.panel {
+.panel { 
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -348,6 +348,7 @@ body {
     left: 20px;
     opacity: 0;
 }
+
 
 .panel.active {
     flex: 5;
@@ -469,30 +470,21 @@ position: relative;
     font-size: 1.5rem;
 }
 #imagen{
-    width: 99.1vw;
+    width: 98.9vw;
     height: 10vh;
 }
 #profesorCheckbox{
     margin-left: 22vw;
 }
-#estudianteCheckbox{
-    margin-left: 30px;
-}
-#magocheckbox{
-    margin-left: 30px;
-}
-#noMagocheckbox{
-    margin-left: 30px;
-}
-#aliveCheckBox{
-    margin-left: 30px;
-}
-#deceasedCheckBox{
-    margin-left: 30px;
-}
+#estudianteCheckbox,
+#magocheckbox,
+#noMagocheckbox,
+#aliveCheckBox,
+#deceasedCheckBox,
 #busquedaimpunt{
     margin-left: 30px;
 }
+
 #error-message{
     font-size: 2.5rem;
     position: absolute;
