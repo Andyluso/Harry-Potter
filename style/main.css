@@ -385,7 +385,6 @@ body {
 /* Footer */
 footer {
     background-color: black;
-    color: antiquewhite;
     padding: 20px;
 
 }
@@ -403,6 +402,10 @@ footer {
     justify-content: space-around;
     align-items: center;
 
+}
+
+.piedepag h2{
+    color: antiquewhite;
 }
 
 /* Modificaciones para página de dos casas */
